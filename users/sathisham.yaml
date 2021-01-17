@@ -1,0 +1,28 @@
+apiVersion: user.openshift.io/v1
+kind: Identity
+metadata:
+  name: IAM:IBMid-55000152P2
+user: {}
+providerName: IAM
+providerUserName: IAM:IBMid-55000152P2
+
+---
+
+apiVersion: user.openshift.io/v1
+kind: User
+groups: null
+identities:
+- IAM:IBMid-55000152P2
+metadata:
+  name: IAM#sakumar1@in.ibm.com
+
+---
+  
+apiVersion: user.openshift.io/v1
+identity:
+  name: IAM:IBMid-55000152P2
+kind: UserIdentityMapping
+metadata:
+  name: IAM:IBMid-55000152P2
+user:
+  name: IAM#sakumar1@in.ibm.com
